@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Samridhi Gurung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="darkModeBtn" aria-label="Toggle dark mode" title="Toggle dark mode"><span id="darkModeIcon">&#9788;</span></button>
+  <header id="navbar">
+    <nav class="container">
+      <a href="index.html#home" class="logo"><img src="assets/logo.png" alt="Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container about" style="margin-top:3rem;">
+    <div class="about-img">
+      <img src="assets/profile.png" alt="About Me" />
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm Samridhi Gurung, a passionate web developer and designer. 
+         My skills include HTML, CSS, JavaScript, and modern frameworks. 
+         I enjoy learning new technologies and taking on creative challenges.
+          I’m passionate about creativity, technology, and building meaningful digital
+           experiences.
+          Currently, I’m exploring web development using HTML, CSS, and JavaScript,
+           while working on my own professional website. I enjoy blending design with 
+           function—whether it's through animation, user-friendly layouts, or responsive
+            interfaces. With a growing interest in tech and innovation, I’m excited to keep 
+            learning, creating, and sharing my work with the world.
+
+</p>
+      <ul>
+        <li>Web Development</li>
+        <li>UI/UX Design</li>
+        <li>Responsive Design</li>
+        <li>Accessibility</li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content container">
+      <a href="index.html#home" class="logo"><img src="assets/logo.png" alt="Logo" /></a>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram" /></a>
+        <a href="#" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub" /></a>
+      </div>
+      <p>&copy; 2025 Samridhi Gurung. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Dark mode toggle functionality
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    function setDarkMode(enabled) {
+      document.body.classList.toggle('dark-mode', enabled);
+      darkModeIcon.innerHTML = enabled ? '&#9790;' : '&#9788;';
+      localStorage.setItem('darkMode', enabled ? '1' : '0');
+    }
+    darkModeBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      darkModeIcon.innerHTML = isDark ? '&#9790;' : '&#9788;';
+      localStorage.setItem('darkMode', isDark ? '1' : '0');
+    });
+    if (localStorage.getItem('darkMode') === '1') {
+      setDarkMode(true);
+    }
+  </script>
+</body>
+</html>

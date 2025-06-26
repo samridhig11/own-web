@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tech Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="image.png" type="image/png">
+</head>
+<body>
+  <button id="goTopBtn" aria-label="Go to top" title="Go to top">
+    &uarr;
+  </button>
+  <button id="darkModeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <span id="darkModeIcon">&#9788;</span>
+  </button>
+  <!-- Navbar -->
+  <header id="navbar">
+    <nav class="container">
+      <a href="#home" class="logo"><img src="ChatGPT_Image_Jun_26__2025__09_11_58_AM-removebg-preview.png"  style="width: 100px; height: auto;" alt="Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Web Developer | Designer | Tech Enthusiast</p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-animation" style="min-width:480px; min-height:390px; display:flex; align-items:center; justify-content:center;">
+      <!-- Tech-themed SVG animation -->
+      <svg width="480" height="390" viewBox="0 0 480 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Laptop base -->
+        <rect x="110" y="240" width="260" height="70" rx="16" fill="#e0c3fc" stroke="#8ec5fc" stroke-width="7"/>
+        <!-- Laptop screen -->
+        <rect x="150" y="120" width="180" height="120" rx="16" fill="#fff" stroke="#232946" stroke-width="7"/>
+        <!-- Code lines -->
+        <rect x="170" y="155" width="80" height="18" rx="7" fill="#8ec5fc">
+          <animate attributeName="width" values="80;180;80" dur="2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="170" y="180" width="140" height="18" rx="7" fill="#ffd803">
+          <animate attributeName="width" values="140;60;140" dur="2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="170" y="205" width="110" height="18" rx="7" fill="#8ec5fc">
+          <animate attributeName="width" values="110;190;110" dur="2s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Floating gear -->
+        <g>
+          <circle cx="400" cy="110" r="36" fill="#ffd803" stroke="#232946" stroke-width="5"/>
+          <g>
+            <rect x="394" y="60" width="12" height="30" rx="6" fill="#232946">
+              <animateTransform attributeName="transform" type="rotate" from="0 400 110" to="360 400 110" dur="3s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="394" y="130" width="12" height="30" rx="6" fill="#232946">
+              <animateTransform attributeName="transform" type="rotate" from="0 400 110" to="360 400 110" dur="3s" repeatCount="indefinite"/>
+            </rect>
+          </g>
+        </g>
+        <!-- Floating chip -->
+        <rect x="50" y="90" width="60" height="36" rx="8" fill="#232946" stroke="#8ec5fc" stroke-width="5">
+          <animateTransform attributeName="transform" type="translate" values="0 0; 0 30; 0 0" dur="2.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="70" y="104" width="22" height="18" rx="5" fill="#ffd803"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects container">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <img src="port.png" alt="Personal Portfolio Website" />
+        <h3>Personal Portfolio Website</h3>
+        <p>A modern, responsive portfolio to showcase my web development and design skills. Built with HTML, CSS, and JavaScript.</p>
+        <a href="project-portfolio.html" class="btn btn-small">View Details</a>
+      </div>
+      <div class="project-card">
+        <img src="ecom.png" alt="E-commerce Store" />
+        <h3>E-commerce Store</h3>
+        <p>Fully functional online store with product catalog, cart, and checkout. Features responsive design and secure payments.</p>
+        <a href="project-ecom.html" class="btn btn-small">View Details</a>
+      </div>
+      <div class="project-card">
+        <img src="blog.png" alt="Blog Platform" />
+        <h3>Blog Platform</h3>
+        <p>Dynamic blog platform with user authentication, post creation, and comments. Built for performance and usability.</p>
+        <a href="project-blog.html" class="btn btn-small">View Details</a>
+      </div>
+      <div class="project-card">
+        <img src="weather.png" alt="Weather App" />
+        <h3>Weather App</h3>
+        <p>Real-time weather updates for any city using a public API. Clean UI and mobile-friendly design.</p>
+        <a href="project-weather.html" class="btn btn-small">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about container">
+    <div class="about-img">
+      <img src="assets/profile.png" alt="About Me" />
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm Samridhi Gurung, a passionate web developer and designer. 
+         My skills include HTML, CSS, JavaScript, and modern frameworks. 
+         I enjoy learning new technologies and taking on creative challenges.
+          I’m passionate about creativity, technology, and building meaningful digital
+           experiences.
+          Currently, I’m exploring web development using HTML, CSS, and JavaScript,
+           while working on my own professional website. I enjoy blending design with 
+           function—whether it's through animation, user-friendly layouts, or responsive
+            interfaces. With a growing interest in tech and innovation, I’m excited to keep 
+            learning, creating, and sharing my work with the world.
+
+
+</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact container">
+    <h2>Get in Touch</h2>
+    <div class="contact-flex">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <ul>
+          <li><strong>Location:</strong> Pokhara, Nepal</li>
+          <li><img src="assets/phone.svg" alt="Phone" class="contact-icon" width="18" height="18"/><strong>Phone:</strong> <a href="tel:+9779800000000">+977 9800000000</a></li>
+          <li><img src="assets/mail.svg" alt="Email" class="contact-icon" width="18" height="18"/><strong>Email:</strong> <a href="mailto:samridhi.gurung@email.com">samridhi.gurung@email.com</a></li>
+        </ul>
+        <div class="contact-social contact-social-large">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/samridhi.gg/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram" /></a>
+          <a href="https://github.com/samridhig11?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub" /></a>
+          <a href="https://x.com/yourusername" target="_blank" rel="noopener" aria-label="X (Twitter)"><img src="assets/x.svg" alt="X (Twitter)" /></a>
+        </div>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <h3>Send a Message</h3>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content container">
+      <a href="#home" class="logo"><img src="ChatGPT_Image_Jun_26__2025__09_11_58_AM-removebg-preview.png" alt="Logo" /></a>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/samridhi.gg/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram" /></a>
+        <a href="https://github.com/samridhig11?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub" /></a>
+        <a href="https://x.com/yourusername" target="_blank" rel="noopener" aria-label="X (Twitter)"><img src="assets/x.svg" alt="X (Twitter)" /></a>
+      </div>
+      <p>&copy; 2025 Samridhi Gurung. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
