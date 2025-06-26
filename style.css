@@ -383,47 +383,37 @@ body.dark-mode #contact-form textarea {
   .contact-info, .contact-form {
     width: 100%;
     margin-bottom: 0;
+    padding: 2rem 1rem;
+  }
+  .contact-social-large a {
+    width: 40px;
+    height: 40px;
   }
 }
-body.dark-mode .contact-info, body.dark-mode .contact-form {
-  background: #232946;
-  color: #fff;
-  border: 1.5px solid #8ec5fc;
-  box-shadow: 0 4px 24px rgba(140, 197, 252, 0.18);
+@media (max-width: 600px) {
+  .contact-info, .contact-form {
+    padding: 1.2rem 0.5rem;
+    border-radius: 10px;
+  }
+  .contact-social-large {
+    gap: 0.7rem;
+  }
+  .contact-social-large a {
+    width: 34px;
+    height: 34px;
+  }
+  .contact-social-large img {
+    width: 18px;
+    height: 18px;
+  }
+  .contact-info h3, .contact-form h3 {
+    font-size: 1.1rem;
+  }
+  .contact-form button {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+  }
 }
-body.dark-mode .contact-info a, body.dark-mode .contact-form a {
-  color: #ffd803;
-}
-body.dark-mode .contact-info h3, body.dark-mode .contact-form h3 {
-  color: #ffd803;
-}
-body.dark-mode .contact-social-large a {
-  background: #232946;
-  box-shadow: 0 2px 8px rgba(140, 197, 252, 0.18);
-}
-body.dark-mode .contact-social-large a:hover {
-  background: #8ec5fc;
-}
-body.dark-mode .contact-social-large img {
-  filter: invert(80%) sepia(10%) saturate(200%) hue-rotate(0deg) brightness(1.5) contrast(1.2);
-}
-body.dark-mode .contact-form input, body.dark-mode .contact-form textarea {
-  background: #232946;
-  color: #fff;
-  border: 1.5px solid #8ec5fc;
-}
-body.dark-mode .contact-form input:focus, body.dark-mode .contact-form textarea:focus {
-  border: 1.5px solid #ffd803;
-}
-body.dark-mode .contact-form button {
-  background: linear-gradient(90deg, #232946 0%, #8ec5fc 100%);
-  color: #ffd803;
-}
-body.dark-mode .contact-form button:hover {
-  background: #ffd803;
-  color: #232946;
-}
-
 /* Footer */
 footer {
   background: #f1f5f9;
