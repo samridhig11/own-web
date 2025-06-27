@@ -34,16 +34,11 @@ nav {
 .logo img {
   height: 40px;
   width: auto;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
-  background: none;
-  border-radius: 8px;
-  padding: 0;
-  box-shadow: none;
-  transition: filter 0.2s, background 0.2s;
+  filter: none;
+  transition: filter 0.3s;
 }
 body.dark-mode .logo img {
-  background: none;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+  filter: drop-shadow(0 0 2px #fff) brightness(1.5) contrast(1.2);
 }
 .nav-links {
   list-style: none;
@@ -701,35 +696,72 @@ body.dark-mode .contact-info .contact-icon {
   }
 }
 
-/* Project Detail Flex Layout */
-.project-detail-flex {
-  display: flex;
-  align-items: flex-start;
-  gap: 2.5rem;
-  margin: 3rem 0;
-  flex-wrap: wrap;
-}
-.project-detail-flex img {
-  max-width: 320px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-.project-detail-text {
-  flex: 1 1 320px;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-@media (max-width: 900px) {
-  .project-detail-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+/* --- Responsive Professional Polish Additions --- */
+@media (max-width: 400px) {
+  .container {
+    width: 99%;
+    padding: 0 2vw;
   }
-  .project-detail-text {
-    align-items: center;
-    text-align: center;
+  .logo img, .footer-content .logo img {
+    height: 24px;
+    max-width: 90vw;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .footer-content .social-icons a {
+    width: 32px;
+    height: 32px;
+  }
+  .footer-content .social-icons img {
+    width: 18px;
+    height: 18px;
+  }
+  .contact-info, .contact-form {
+    padding: 0.7rem 0.2rem;
+    font-size: 0.97rem;
+  }
+  .contact-form button {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+  .contact-info ul {
+    font-size: 0.95rem;
+  }
+  .contact-info li {
+    gap: 0.3rem;
+  }
+  .about-img img {
+    width: 60px;
+  }
+  .project-card img {
+    max-width: 60px;
+  }
+}
+
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent horizontal scroll on all sections */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Extra: Make sure form fields and buttons never overflow */
+#contact-form input, #contact-form textarea, .contact-form input, .contact-form textarea {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Extra: Footer text shrink on mobile */
+@media (max-width: 400px) {
+  footer p {
+    font-size: 0.8rem;
   }
 }
