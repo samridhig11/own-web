@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Samridhi Gurung</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="darkModeBtn" aria-label="Toggle dark mode" title="Toggle dark mode"><span id="darkModeIcon">&#9788;</span></button>
+  <header id="navbar">
+    <nav class="container">
+      <a href="index.html#home" class="logo"><img src="ChatGPT_Image_Jun_26__2025__09_11_58_AM-removebg-preview.png" alt="Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container" style="margin-top:3rem;">
+    <section class="projects" style="background:#fff; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.07); padding:2.5rem 1rem; margin-bottom:2rem;">
+      <h2 style="color:#232946; text-align:center; margin-bottom:2rem;">Projects</h2>
+      <div class="project-cards" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem;">
+        <div class="project-card" style="background:#f7f7f7; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.07); padding:2rem 1rem; text-align:center;">
+          <img src="port.png" alt="Personal Portfolio Website" style="max-width:180px; margin-bottom:1rem; border-radius:10px;" />
+          <h3 style="margin-bottom:0.7rem;">Personal Portfolio Website</h3>
+          <p style="margin-bottom:1.2rem;">A modern, responsive portfolio to showcase my web development and design skills. Built with HTML, CSS, and JavaScript.</p>
+          <a href="project-portfolio.html" class="btn btn-small" aria-label="View details about Personal Portfolio Website">View Details</a>
+        </div>
+        <div class="project-card" style="background:#f7f7f7; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.07); padding:2rem 1rem; text-align:center;">
+          <img src="ecom.png" alt="E-commerce Store" style="max-width:180px; margin-bottom:1rem; border-radius:10px;" />
+          <h3 style="margin-bottom:0.7rem;">E-commerce Store</h3>
+          <p style="margin-bottom:1.2rem;">Fully functional online store with product catalog, cart, and checkout. Features responsive design and secure payments.</p>
+          <a href="project-ecom.html" class="btn btn-small" aria-label="View details about E-commerce Store">View Details</a>
+        </div>
+        <div class="project-card" style="background:#f7f7f7; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.07); padding:2rem 1rem; text-align:center;">
+          <img src="blog.png" alt="Blog Platform" style="max-width:180px; margin-bottom:1rem; border-radius:10px;" />
+          <h3 style="margin-bottom:0.7rem;">Blog Platform</h3>
+          <p style="margin-bottom:1.2rem;">Dynamic blog platform with user authentication, post creation, and comments. Built for performance and usability.</p>
+          <a href="project-blog.html" class="btn btn-small" aria-label="View details about Blog Platform">View Details</a>
+        </div>
+        <div class="project-card" style="background:#f7f7f7; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.07); padding:2rem 1rem; text-align:center;">
+          <img src="weather.png" alt="Weather App" style="max-width:180px; margin-bottom:1rem; border-radius:10px;" />
+          <h3 style="margin-bottom:0.7rem;">Weather App</h3>
+          <p style="margin-bottom:1.2rem;">Real-time weather updates for any city using a public API. Clean UI and mobile-friendly design.</p>
+          <a href="project-weather.html" class="btn btn-small" aria-label="View details about Weather App">View Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content container">
+      <a href="index.html#home" class="logo"><img src="ChatGPT_Image_Jun_26__2025__09_11_58_AM-removebg-preview.png" alt="Logo" /></a>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/samridhi.gg/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram" /></a>
+        <a href="https://github.com/samridhig11?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub" /></a>
+      </div>
+      <p>&copy; 2025 Samridhi Gurung. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Dark mode toggle functionality
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    function setDarkMode(enabled) {
+      document.body.classList.toggle('dark-mode', enabled);
+      darkModeIcon.innerHTML = enabled ? '\u263E' : '\u263C';
+      localStorage.setItem('darkMode', enabled ? '1' : '0');
+    }
+    darkModeBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      darkModeIcon.innerHTML = isDark ? '\u263E' : '\u263C';
+      localStorage.setItem('darkMode', isDark ? '1' : '0');
+    });
+    if (localStorage.getItem('darkMode') === '1') {
+      setDarkMode(true);
+    }
+  </script>
+</body>
+</html>
