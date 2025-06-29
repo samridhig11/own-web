@@ -764,28 +764,35 @@ body.dark-mode .contact-form textarea::placeholder {
   }
 }
 
-/* Ensure all images are responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* --- Extra Responsive Polish for index.html --- */
+@media (max-width: 900px) {
+  .hero-animation { min-width: 0 !important; width: 100% !important; height: 180px !important; }
+  .hero-content { max-width: 100% !important; min-width: 0 !important; }
+  .project-cards { grid-template-columns: 1fr 1fr !important; }
 }
-
-/* Prevent horizontal scroll on all sections */
-body, html {
-  overflow-x: hidden;
+@media (max-width: 700px) {
+  .container { width: 98% !important; }
+  .projects, .about, .contact, .hero { padding: 1.2rem 0.2rem !important; }
+  .project-cards { grid-template-columns: 1fr !important; }
+  .footer-content { flex-direction: column !important; gap: 1rem !important; }
 }
-
-/* Extra: Make sure form fields and buttons never overflow */
-#contact-form input, #contact-form textarea, .contact-form input, .contact-form textarea {
-  min-width: 0;
-  width: 100%;
-  box-sizing: border-box;
+@media (max-width: 500px) {
+  .hero-content h1 { font-size: 1.3rem !important; }
+  .about-img img { width: 70px !important; }
+  .project-card img { max-width: 70px !important; }
+  .btn, .btn-small { padding: 0.5rem 1rem !important; font-size: 0.9rem !important; }
+  #goTopBtn, #darkModeBtn { width: 34px !important; height: 34px !important; font-size: 1.1rem !important; bottom: 12px !important; right: 12px !important; }
 }
-
-/* Extra: Footer text shrink on mobile */
 @media (max-width: 400px) {
-  footer p {
-    font-size: 0.8rem;
-  }
+  .logo img, .footer-content .logo img { height: 22px !important; max-width: 90vw !important; }
+  .nav-links { gap: 0.3rem !important; font-size: 0.93rem !important; }
+  .footer-content .social-icons a { width: 28px !important; height: 28px !important; }
+  .footer-content .social-icons img { width: 16px !important; height: 16px !important; }
+  .contact-info, .contact-form { padding: 0.5rem 0.1rem !important; font-size: 0.95rem !important; }
+  .contact-form button { padding: 0.4rem 0.7rem !important; font-size: 0.88rem !important; }
+  .about-img img { width: 50px !important; }
+  .project-card img { max-width: 50px !important; }
 }
+img { max-width: 100% !important; height: auto !important; display: block !important; }
+body, html { overflow-x: hidden !important; }
+#navbar, .footer-content, .projects, .about, .contact, .hero { box-sizing: border-box !important; }
