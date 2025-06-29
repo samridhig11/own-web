@@ -621,6 +621,30 @@ body.dark-mode .contact-info .contact-icon {
 body.dark-mode .contact-info .contact-icon {
   filter: invert(80%) sepia(10%) saturate(200%) hue-rotate(0deg) brightness(1.5) contrast(1.2);
 }
+body.dark-mode .contact-info,
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-info ul,
+body.dark-mode .contact-info li,
+body.dark-mode .contact-info a,
+body.dark-mode .contact-form,
+body.dark-mode .contact-form h3,
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea,
+body.dark-mode .contact-form label {
+  color: #fff !important;
+  background: #232946 !important;
+  border-color: #393e5c !important;
+}
+body.dark-mode .contact-info a {
+  text-decoration: underline;
+}
+body.dark-mode .contact-info strong {
+  color: #ffd803 !important;
+}
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+  color: #bfc4d1 !important;
+}
 
 /* Responsive Styles */
 @media (max-width: 900px) {
